@@ -68,7 +68,7 @@
     transition: opacity 0.3s;
 }
 
-.mini_img_container img.active {
+.mini_img_container.active img {
     opacity: 1;
     border: 2px solid white;
 }

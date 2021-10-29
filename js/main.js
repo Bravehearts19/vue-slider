@@ -50,19 +50,15 @@ window.addEventListener("DOMContentLoaded", function () {
                 }
                 this.currentActiveImage = newIndex;
             },
-            onImageClick(image) {
-                for (let i = 0; i < imagesList.length; i++) {
-                    const img = imagesList[i];
-                    if(image === img) {
-                        this.currentActiveImage = i
-                    }
-                }
+            onImageClick(i) {
+                console.log(i);
+                this.currentActiveImage = i;
             },
         },
-        mounted() {
+        /* mounted() {
          setInterval(() => {
             this.onNextClick();
             }, 6000)       
-        }
+        } */
     });
 });

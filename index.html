@@ -50,17 +50,15 @@
                             <div class="col-2 bg-dark p-0 position-relative">
                                 <!-- Inizio della creazione delle varie immagini all'interno del container di destra
                                      che andranno a posizionarsi una sotto l'altra -->
-                                <div class="mini_img_container" :class="i === currentActiveImage ? 'active' : ''" v-for="(image, i) in imagesList" v-on:click="onImageClick(image)">
+                                <div class="mini_img_container" :class="i === currentActiveImage ? 'active' : ''" v-for="(image, i) in imagesList" v-on:click="onImageClick(i)">
                                     <img :src="image.url" :alt="'Immagine numeri' + (i + 1)">
                                 </div>
                                 <!-- Fine della creazione delle varie immagini all'interno del container di destra -->
                                 
-                                <!-- Inizio del container delle frecce -->
-                                <div class="arrow_container">
-                                    <a href="#" class="arrow_up" v-on:click="onPrevClick"><i class="far fa-arrow-alt-circle-up text-white"></i></a>
-                                    <a href="#" class="arrow_down" v-on:click="onNextClick"><i class="far fa-arrow-alt-circle-down text-white"></i></a>
-                                </div>
-                                <!-- Fine del container delle frecce -->
+                                <!-- Inizio delle frecce -->
+                                <a href="#" class="arrow_up" v-on:click="onPrevClick"><i class="far fa-arrow-alt-circle-up text-white"></i></a>
+                                <a href="#" class="arrow_down" v-on:click="onNextClick"><i class="far fa-arrow-alt-circle-down text-white"></i></a>
+                                <!-- Fine delle frecce -->
                             </div>
                             <!-- Fine container di destra -->
                         </div>

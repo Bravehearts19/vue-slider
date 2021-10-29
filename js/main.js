@@ -55,10 +55,10 @@ window.addEventListener("DOMContentLoaded", function () {
                 this.currentActiveImage = i;
             },
         },
-        /* mounted() {
+        mounted() {
          setInterval(() => {
             this.onNextClick();
             }, 6000)       
-        } */
+        }
     });
 });
